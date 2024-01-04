@@ -1,14 +1,9 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
+{%extends 'portfolio/base.html'%}
+{% block content%}
 {% load static %}
 
-THIS IS MY PORTFOLIO <a href="{%url 'blog:all_blogs'%}">BLOGS</a>
+THIS IS MY PORTFOLIO
 <br>
 <img src="{% static 'portfolio/mypic.jpg' %}" width="100px" height="100px" >
 <br>
@@ -23,5 +18,4 @@ THIS IS MY PORTFOLIO <a href="{%url 'blog:all_blogs'%}">BLOGS</a>
     {% endif %}
 {%endfor%}
 
-</body>
-</html>
+{%endblock%}
